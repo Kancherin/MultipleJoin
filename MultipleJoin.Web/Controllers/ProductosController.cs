@@ -18,7 +18,7 @@ namespace MultipleJoin.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _productosHelper.GetProductosLinq1Async());
+            return View(await _productosHelper.GetProductosAsync());
         }
     }
 }

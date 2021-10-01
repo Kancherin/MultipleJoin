@@ -6,6 +6,6 @@ namespace MultipleJoin.Web.Helpers
 {
     public interface IProductosHelper
     {
-        Task<List<ProductoViewModel>> GetProductosLinq1Async();
+        Task<List<ProductoViewModel>> GetProductosAsync();
     }
 }
