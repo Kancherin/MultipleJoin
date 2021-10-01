@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MultipleJoin.Web.Data;
+using MultipleJoin.Web.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,7 @@ namespace MultipleJoin.Web
             {
                 x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+            services.AddScoped<IProductosHelper, ProductosHelper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
